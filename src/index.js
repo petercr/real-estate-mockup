@@ -6,4 +6,10 @@ M.Sidenav.init(sideNav, {});
 
 // Image Slider
 const slider = document.querySelector(".slider");
-let imageSlider = M.Slider.init(slider);
+
+M.Slider.init(slider, {
+    indicators: false,
+    height: 500,
+    transition: 500,
+    interval: 4000
+});
