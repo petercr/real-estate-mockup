@@ -27,4 +27,8 @@ M.Autocomplete.init(auto, {
         "Falmouth": null,
         "Sandwich": null,
     }
-})
+});
+
+// Material boxes 
+const mb = document.querySelectorAll('.materialboxed');
+M.Materialbox.init(mb, {});
