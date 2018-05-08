@@ -45,7 +45,6 @@ const zwsId = `zws-id=X1-ZWz1gdyz30wvt7_5rw5j&`;
 // basic address in Seattle copied from Zillow docs 
 let basicAddress = `address=2114+Bigelow+Ave&citystatezip=Seattle%2C+WA`;
 
-const headers = 
 
 fetch((url + zwsId + basicAddress), {mode: "no-cors"})
   .then(req => req.json())
