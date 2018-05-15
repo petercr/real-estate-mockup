@@ -45,10 +45,10 @@ const pixabayKey = `?key=8789352-0779e605e98c37564675387fd`;
 // basic address in Seattle copied from Zillow docs 
 let searchItems = `&q=beach+house&image_type=photo`;
 
-
-fetch((url + pixabayKey + searchItems), {mode: "no-cors"})
-  .then(function(res) {
-     return res.json();
+let totalSearch = url + pixabayKey + searchItems;
+fetch(totalSearch, {mode: "no-cors"})
+  .then(function(req) {
+     return req.json();
   })
   .then(function (req){
     console.dir(req);
