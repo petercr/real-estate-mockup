@@ -35,20 +35,21 @@ M.Materialbox.init(mb, {});
 const ss = document.querySelectorAll(".scrollspy");
 M.ScrollSpy.init(ss, {});
 
-// base url for the Zillow API
-const url = `http://www.zillow.com/webservice/GetSearchResults.htm?`;
+// base url for the Pixabay API
+const url = `https://pixabay.com/api/`;
 
 // zws-id key for calling the API
 // This is my personal key, please don't use for your own projects
-const zwsId = `zws-id=X1-ZWz1gdyz30wvt7_5rw5j&`;
+const pixabayKey = `?key=8789352-0779e605e98c37564675387fd`;
 
 // basic address in Seattle copied from Zillow docs 
-let basicAddress = `address=2114+Bigelow+Ave&citystatezip=Seattle%2C+WA`;
+let searchItems = `&q=beach+house&image_type=photo`;
 
 
-fetch((url + zwsId + basicAddress), {mode: "no-cors"})
-  .then(req => req.json())
-  .then(function (res){
-    console.log(res);
+fetch((url + pixabayKey + searchItems), {mode: "no-cors"})
+  .then(function(res) {
+     return res.json();
   })
-  .catch(error => console.error(error))
+  .then(function (req){
+    console.dir(req);
+  });
